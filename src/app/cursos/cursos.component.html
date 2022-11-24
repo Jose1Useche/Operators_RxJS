@@ -1,0 +1,7 @@
+<p>Estoy en la vista de cursos y los cursos son:</p>
+<ul>
+    <li *ngFor="let curso of cursos, index as i"> 
+        <a [routerLink]="curso.id">{{ curso.courseName }}, {{ curso.duration }}, nivel: {{ curso.level }}, index: {{ i }}, cursoId: {{ curso.id }}</a></li>
+</ul>
+
+<router-outlet></router-outlet>

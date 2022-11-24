@@ -1,0 +1,18 @@
+<p>empleados works!</p>
+<h3>Lista de Empleados</h3>
+<ul>
+    <!-- <li *ngFor="let empleado of misEmpleados">
+        <a routerLink="{{ empleado.id }}"
+           [queryParams]="{consulta1: 7, consulta2: 8}"
+           [fragment]="'cargando-fragmento'">{{ empleado.name }}  {{ empleado.lastName }}</a>
+    </li> -->
+    <li *ngFor="let empleado of misEmpleados">
+        <a routerLink="{{ empleado.id }}"
+           [queryParams]="{consulta1: 7, consulta2: 8}">{{ empleado.name }}  {{ empleado.lastName }}</a>
+    </li>
+</ul>
+
+<button [routerLink]="['hola', 'bebe']">Click me!</button>
+<hr>
+<h3>Hacia otra vista hija de empleados</h3>
+<router-outlet></router-outlet>

@@ -1,0 +1,13 @@
+<p>empleado works!</p>
+<p>El id que recibo de la url es: {{ urlId }}</p>
+<p>El fragmento que recibo de la url es: {{ ancla }}</p>
+<p>La consulta de Parametro que recibo de la url es: {{ queryParams1 }} | {{ queryParams2 }}</p>
+<br>
+<!-- <button routerLink="/empleados/1">Enviar Id 1</button>&nbsp;&nbsp;
+<button [routerLink]="['/empleados', 2]">Enviar Id 2</button> -->
+<button (click)="cargaNuevaRuta(1)">Enviar Id 1</button>&nbsp;&nbsp;
+<button (click)="cargaNuevaRuta(2)">Enviar Id 2</button>
+<br><br>
+<button (click)="editWorker()">Editar empleado</button>
+
+<router-outlet></router-outlet>

@@ -26,6 +26,7 @@ import { RxjsComponent } from './rxjs/rxjs.component';
 import { AjaxComponent } from './rxjs/operators/ajax/ajax/ajax.component';
 import { DeferComponent } from './rxjs/operators/defer/defer/defer.component';
 import { FromComponent } from './rxjs/operators/from/from/from.component';
+import { FromEventComponent } from './rxjs/operators/fromevent/from-event/from-event.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { FromComponent } from './rxjs/operators/from/from/from.component';
     AjaxComponent,
     DeferComponent,
     FromComponent,
+    FromEventComponent,
   ],
   imports: [
     BrowserModule,

@@ -27,6 +27,7 @@ import { RxjsComponent } from './rxjs/rxjs.component';
 import { AjaxComponent } from './rxjs/operators/ajax/ajax/ajax.component';
 import { DeferComponent } from './rxjs/operators/defer/defer/defer.component';
 import { FromComponent } from './rxjs/operators/from/from/from.component';
+import { FromEventComponent } from './rxjs/operators/fromevent/from-event/from-event.component';
 
 const appRoutes: Routes = [
     {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -56,6 +57,7 @@ const appRoutes: Routes = [
     {path: 'ajax', component: AjaxComponent},
     {path: 'defer', component: DeferComponent},
     {path: 'from', component: FromComponent},
+    {path: 'from-event', component: FromEventComponent},
     //--------------------Operators--------------------//
     //-------------------------------------------------//
     {path: 'not-found', component: ErrorMessageComponent, data: {miMensaje: 'Página no encontrada (data-route)'}},

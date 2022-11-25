@@ -16,7 +16,7 @@ export class FromComponent implements OnInit {
     
     const letter$ = from('RxJS mola');
 
-    letter$.subscribe(console.log);// Salida: 'R', 'x', 'J', 'S', ' ', 'm', 'o', 'l', 'a'
+    letter$.subscribe(data => console.log('next: ' + data), error => null, () => console.log('I\'m done!'));// Salida: 'R', 'x', 'J', 'S', ' ', 'm', 'o', 'l', 'a'
 
     //------------------------------Crear un Observable a partir de una cadena------------------------------//
     //------------------------------------------------------------------------------------------------------//

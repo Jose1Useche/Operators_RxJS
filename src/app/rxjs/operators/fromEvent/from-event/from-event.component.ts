@@ -14,7 +14,7 @@ export class FromEventComponent implements OnInit {
     //-------------------------------------------------------------//
     //------------Crear un Observable que emite clicks-------------//
 
-    const click$ = fromEvent<MouseEvent>(document.querySelector('button'), "click");
+    const click$ = fromEvent<MouseEvent>(document.querySelector('button'), 'click');
 
     click$.subscribe((click) => console.log(click));
 
@@ -55,6 +55,7 @@ export class FromEventComponent implements OnInit {
     //--------Emitir los clicks que ocurran en el DOM---------//
 
     const clicks = fromEvent(document, "click");
+
     clicks.subscribe((x) => console.log(x));
 
     //--------Emitir los clicks que ocurran en el DOM---------//

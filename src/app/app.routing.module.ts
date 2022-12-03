@@ -28,6 +28,21 @@ import { AjaxComponent } from './rxjs/operators/ajax/ajax/ajax.component';
 import { DeferComponent } from './rxjs/operators/defer/defer/defer.component';
 import { FromComponent } from './rxjs/operators/from/from/from.component';
 import { FromEventComponent } from './rxjs/operators/fromevent/from-event/from-event.component';
+import { FromEventPatternComponent } from './rxjs/operators/fromEventPattern/from-event-pattern/from-event-pattern.component';
+import { GenerateComponent } from './rxjs/operators/generate/generate/generate.component';
+import { IntervalComponent } from './rxjs/operators/interval/interval/interval.component';
+import { OfComponent } from './rxjs/operators/of/of/of.component';
+import { RangeComponent } from './rxjs/operators/range/range/range.component';
+import { ThrowErrorComponent } from './rxjs/operators/throw-error/throw-error/throw-error.component';
+import { TimerComponent } from './rxjs/operators/timer/timer/timer.component';
+import { IifComponent } from './rxjs/operators/iif/iif/iif.component';
+import { CombineLatestComponent } from './rxjs/operators/combineLatest/combine-latest/combine-latest.component';
+import { ConcatComponent } from './rxjs/operators/concat/concat/concat.component';
+import { ForkJoinComponent } from './rxjs/operators/fork-join/fork-join/fork-join.component';
+import { MergeComponent } from './rxjs/operators/merge/merge/merge.component';
+import { PartitionComponent } from './rxjs/operators/partition/partition/partition.component';
+import { RaceComponent } from './rxjs/operators/race/race/race.component';
+
 
 const appRoutes: Routes = [
     {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -58,6 +73,21 @@ const appRoutes: Routes = [
     {path: 'defer', component: DeferComponent},
     {path: 'from', component: FromComponent},
     {path: 'from-event', component: FromEventComponent},
+    {path: 'from-event-pattern', component: FromEventPatternComponent},
+    {path: 'generate', component: GenerateComponent},
+    {path: 'interval', component: IntervalComponent},
+    {path: 'of', component: OfComponent},
+    {path: 'range', component: RangeComponent},
+    {path: 'throw-error', component: ThrowErrorComponent},
+    {path: 'timer', component: TimerComponent},
+    {path: 'iif', component: IifComponent},
+
+    {path: 'combine-latest', component: CombineLatestComponent},
+    {path: 'concat', component: ConcatComponent},
+    {path: 'fork-join', component: ForkJoinComponent},
+    {path: 'merge', component: MergeComponent},
+    {path: 'partition', component: PartitionComponent},
+    {path: 'race', component: RaceComponent},
     //--------------------Operators--------------------//
     //-------------------------------------------------//
     {path: 'not-found', component: ErrorMessageComponent, data: {miMensaje: 'Página no encontrada (data-route)'}},

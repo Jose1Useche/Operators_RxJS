@@ -27,6 +27,20 @@ import { AjaxComponent } from './rxjs/operators/ajax/ajax/ajax.component';
 import { DeferComponent } from './rxjs/operators/defer/defer/defer.component';
 import { FromComponent } from './rxjs/operators/from/from/from.component';
 import { FromEventComponent } from './rxjs/operators/fromevent/from-event/from-event.component';
+import { FromEventPatternComponent } from './rxjs/operators/fromEventPattern/from-event-pattern/from-event-pattern.component';
+import { GenerateComponent } from './rxjs/operators/generate/generate/generate.component';
+import { IntervalComponent } from './rxjs/operators/interval/interval/interval.component';
+import { OfComponent } from './rxjs/operators/of/of/of.component';
+import { RangeComponent } from './rxjs/operators/range/range/range.component';
+import { ThrowErrorComponent } from './rxjs/operators/throw-error/throw-error/throw-error.component';
+import { TimerComponent } from './rxjs/operators/timer/timer/timer.component';
+import { IifComponent } from './rxjs/operators/iif/iif/iif.component';
+import { CombineLatestComponent } from './rxjs/operators/combineLatest/combine-latest/combine-latest.component';
+import { ConcatComponent } from './rxjs/operators/concat/concat/concat.component';
+import { ForkJoinComponent } from './rxjs/operators/fork-join/fork-join/fork-join.component';
+import { MergeComponent } from './rxjs/operators/merge/merge/merge.component';
+import { PartitionComponent } from './rxjs/operators/partition/partition/partition.component';
+import { RaceComponent } from './rxjs/operators/race/race/race.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +67,20 @@ import { FromEventComponent } from './rxjs/operators/fromevent/from-event/from-e
     DeferComponent,
     FromComponent,
     FromEventComponent,
+    FromEventPatternComponent,
+    GenerateComponent,
+    IntervalComponent,
+    OfComponent,
+    RangeComponent,
+    ThrowErrorComponent,
+    TimerComponent,
+    IifComponent,
+    CombineLatestComponent,
+    ConcatComponent,
+    ForkJoinComponent,
+    MergeComponent,
+    PartitionComponent,
+    RaceComponent,
   ],
   imports: [
     BrowserModule,

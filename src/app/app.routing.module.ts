@@ -42,6 +42,16 @@ import { ForkJoinComponent } from './rxjs/operators/fork-join/fork-join/fork-joi
 import { MergeComponent } from './rxjs/operators/merge/merge/merge.component';
 import { PartitionComponent } from './rxjs/operators/partition/partition/partition.component';
 import { RaceComponent } from './rxjs/operators/race/race/race.component';
+import { ZipComponent } from './rxjs/operators/zip/zip/zip.component';
+import { BufferComponent } from './rxjs/operators/buffer/buffer/buffer.component';
+import { BufferCountComponent } from './rxjs/operators/buffer-count/buffer-count/buffer-count.component';
+import { BufferTimeComponent } from './rxjs/operators/buffer-time/buffer-time/buffer-time.component';
+import { BufferToggleComponent } from './rxjs/operators/buffer-toggle/buffer-toggle/buffer-toggle.component';
+import { BufferWhenComponent } from './rxjs/operators/buffer-when/buffer-when/buffer-when.component';
+import { ConcatMapComponent } from './rxjs/operators/concat-map/concat-map/concat-map.component';
+import { ExhaustMapComponent } from './rxjs/operators/exhaust-map/exhaust-map/exhaust-map.component';
+import { ExpandComponent } from './rxjs/operators/expand/expand/expand.component';
+import { GroupByComponent } from './rxjs/operators/group-by/group-by/group-by.component';
 
 
 const appRoutes: Routes = [
@@ -88,6 +98,17 @@ const appRoutes: Routes = [
     {path: 'merge', component: MergeComponent},
     {path: 'partition', component: PartitionComponent},
     {path: 'race', component: RaceComponent},
+    {path: 'zip', component: ZipComponent},
+
+    {path: 'buffer', component: BufferComponent},
+    {path: 'buffer-count', component: BufferCountComponent},
+    {path: 'buffer-time', component: BufferTimeComponent},
+    {path: 'buffer-toggle', component: BufferToggleComponent},
+    {path: 'buffer-when', component: BufferWhenComponent},
+    {path: 'concat-map', component: ConcatMapComponent},
+    {path: 'exhaust-map', component: ExhaustMapComponent},
+    {path: 'expand', component: ExpandComponent},
+    {path: 'group-by', component: GroupByComponent},
     //--------------------Operators--------------------//
     //-------------------------------------------------//
     {path: 'not-found', component: ErrorMessageComponent, data: {miMensaje: 'Página no encontrada (data-route)'}},

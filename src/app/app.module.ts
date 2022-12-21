@@ -51,6 +51,10 @@ import { ConcatMapComponent } from './rxjs/operators/concat-map/concat-map/conca
 import { ExhaustMapComponent } from './rxjs/operators/exhaust-map/exhaust-map/exhaust-map.component';
 import { ExpandComponent } from './rxjs/operators/expand/expand/expand.component';
 import { GroupByComponent } from './rxjs/operators/group-by/group-by/group-by.component';
+import { MapComponent } from './rxjs/operators/map/map/map.component';
+import { MergeMapComponent } from './rxjs/operators/merge-map/merge-map/merge-map.component';
+import { MergeScanComponent } from './rxjs/operators/merge-scan/merge-scan/merge-scan.component';
+import { PairwiseComponent } from './rxjs/operators/pairwise/pairwise/pairwise.component';
 
 @NgModule({
   declarations: [
@@ -101,6 +105,10 @@ import { GroupByComponent } from './rxjs/operators/group-by/group-by/group-by.co
     ExhaustMapComponent,
     ExpandComponent,
     GroupByComponent,
+    MapComponent,
+    MergeMapComponent,
+    MergeScanComponent,
+    PairwiseComponent,
   ],
   imports: [
     BrowserModule,

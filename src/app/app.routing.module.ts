@@ -52,6 +52,10 @@ import { ConcatMapComponent } from './rxjs/operators/concat-map/concat-map/conca
 import { ExhaustMapComponent } from './rxjs/operators/exhaust-map/exhaust-map/exhaust-map.component';
 import { ExpandComponent } from './rxjs/operators/expand/expand/expand.component';
 import { GroupByComponent } from './rxjs/operators/group-by/group-by/group-by.component';
+import { MapComponent } from './rxjs/operators/map/map/map.component';
+import { MergeMapComponent } from './rxjs/operators/merge-map/merge-map/merge-map.component';
+import { MergeScanComponent } from './rxjs/operators/merge-scan/merge-scan/merge-scan.component';
+import { PairwiseComponent } from './rxjs/operators/pairwise/pairwise/pairwise.component';
 
 
 const appRoutes: Routes = [
@@ -109,6 +113,10 @@ const appRoutes: Routes = [
     {path: 'exhaust-map', component: ExhaustMapComponent},
     {path: 'expand', component: ExpandComponent},
     {path: 'group-by', component: GroupByComponent},
+    {path: 'map', component: MapComponent},
+    {path: 'merge-map', component: MergeMapComponent},
+    {path: 'merge-scan', component: MergeScanComponent},
+    {path: 'pairwise', component: PairwiseComponent},
     //--------------------Operators--------------------//
     //-------------------------------------------------//
     {path: 'not-found', component: ErrorMessageComponent, data: {miMensaje: 'Página no encontrada (data-route)'}},

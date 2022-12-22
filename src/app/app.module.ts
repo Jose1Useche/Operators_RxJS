@@ -55,6 +55,8 @@ import { MapComponent } from './rxjs/operators/map/map/map.component';
 import { MergeMapComponent } from './rxjs/operators/merge-map/merge-map/merge-map.component';
 import { MergeScanComponent } from './rxjs/operators/merge-scan/merge-scan/merge-scan.component';
 import { PairwiseComponent } from './rxjs/operators/pairwise/pairwise/pairwise.component';
+import { ScanComponent } from './rxjs/operators/scan/scan/scan.component';
+import { SwitchMapComponent } from './rxjs/operators/switch-map/switch-map/switch-map.component';
 
 @NgModule({
   declarations: [
@@ -109,6 +111,8 @@ import { PairwiseComponent } from './rxjs/operators/pairwise/pairwise/pairwise.c
     MergeMapComponent,
     MergeScanComponent,
     PairwiseComponent,
+    ScanComponent,
+    SwitchMapComponent,
   ],
   imports: [
     BrowserModule,

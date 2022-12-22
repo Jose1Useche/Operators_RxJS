@@ -56,6 +56,8 @@ import { MapComponent } from './rxjs/operators/map/map/map.component';
 import { MergeMapComponent } from './rxjs/operators/merge-map/merge-map/merge-map.component';
 import { MergeScanComponent } from './rxjs/operators/merge-scan/merge-scan/merge-scan.component';
 import { PairwiseComponent } from './rxjs/operators/pairwise/pairwise/pairwise.component';
+import { ScanComponent } from './rxjs/operators/scan/scan/scan.component';
+import { SwitchMapComponent } from './rxjs/operators/switch-map/switch-map/switch-map.component';
 
 
 const appRoutes: Routes = [
@@ -117,6 +119,8 @@ const appRoutes: Routes = [
     {path: 'merge-map', component: MergeMapComponent},
     {path: 'merge-scan', component: MergeScanComponent},
     {path: 'pairwise', component: PairwiseComponent},
+    {path: 'scan', component: ScanComponent},
+    {path: 'switch-map', component: SwitchMapComponent},
     //--------------------Operators--------------------//
     //-------------------------------------------------//
     {path: 'not-found', component: ErrorMessageComponent, data: {miMensaje: 'Página no encontrada (data-route)'}},

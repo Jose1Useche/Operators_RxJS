@@ -58,6 +58,22 @@ import { MergeScanComponent } from './rxjs/operators/merge-scan/merge-scan/merge
 import { PairwiseComponent } from './rxjs/operators/pairwise/pairwise/pairwise.component';
 import { ScanComponent } from './rxjs/operators/scan/scan/scan.component';
 import { SwitchMapComponent } from './rxjs/operators/switch-map/switch-map/switch-map.component';
+import { WindowComponent } from './rxjs/operators/window/window/window.component';
+import { WindowCountComponent } from './rxjs/operators/window-count/window-count/window-count.component';
+import { WindowTimeComponent } from './rxjs/operators/window-time/window-time/window-time.component';
+import { WindowToggleComponent } from './rxjs/operators/window-toggle/window-toggle/window-toggle.component';
+import { WindowWhenComponent } from './rxjs/operators/window-when/window-when/window-when.component';
+import { AuditComponent } from './rxjs/operators/audit/audit/audit.component';
+import { AuditTimeComponent } from './rxjs/operators/audit-time/audit-time/audit-time.component';
+import { DebounceComponent } from './rxjs/operators/debounce/debounce/debounce.component';
+import { DebounceTimeComponent } from './rxjs/operators/debounce-time/debounce-time/debounce-time.component';
+import { DistinctComponent } from './rxjs/operators/distinct/distinct/distinct.component';
+import { DistinctUntilChangedComponent } from './rxjs/operators/distinct-until-changed/distinct-until-changed/distinct-until-changed.component';
+import { DistinctUntilKeyChangedComponent } from './rxjs/operators/distinct-until-key-changed/distinct-until-key-changed/distinct-until-key-changed.component';
+import { ElementAtComponent } from './rxjs/operators/element-at/element-at/element-at.component';
+import { FilterComponent } from './rxjs/operators/filter/filter/filter.component';
+import { FirstComponent } from './rxjs/operators/first/first/first.component';
+import { IgnoreElementsComponent } from './rxjs/operators/ignore-elements/ignore-elements/ignore-elements.component';
 
 
 const appRoutes: Routes = [
@@ -121,6 +137,23 @@ const appRoutes: Routes = [
     {path: 'pairwise', component: PairwiseComponent},
     {path: 'scan', component: ScanComponent},
     {path: 'switch-map', component: SwitchMapComponent},
+    {path: 'window', component: WindowComponent},
+    {path: 'window-count', component: WindowCountComponent},
+    {path: 'window-time', component: WindowTimeComponent},
+    {path: 'window-toggle', component: WindowToggleComponent},
+    {path: 'window-when', component: WindowWhenComponent},
+
+    {path: 'audit', component: AuditComponent},
+    {path: 'audit-time', component: AuditTimeComponent},
+    {path: 'debounce', component: DebounceComponent},
+    {path: 'debounce-time', component: DebounceTimeComponent},
+    {path: 'distinct', component: DistinctComponent},
+    {path: 'distinct-until-changed', component: DistinctUntilChangedComponent},
+    {path: 'distinct-until-key-changed', component: DistinctUntilKeyChangedComponent},
+    {path: 'element-at', component: ElementAtComponent},
+    {path: 'filter', component: FilterComponent},
+    {path: 'first', component: FirstComponent},
+    {path: 'ignore-elements', component: IgnoreElementsComponent},
     //--------------------Operators--------------------//
     //-------------------------------------------------//
     {path: 'not-found', component: ErrorMessageComponent, data: {miMensaje: 'Página no encontrada (data-route)'}},

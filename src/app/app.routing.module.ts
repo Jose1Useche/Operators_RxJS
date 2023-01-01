@@ -74,6 +74,20 @@ import { ElementAtComponent } from './rxjs/operators/element-at/element-at/eleme
 import { FilterComponent } from './rxjs/operators/filter/filter/filter.component';
 import { FirstComponent } from './rxjs/operators/first/first/first.component';
 import { IgnoreElementsComponent } from './rxjs/operators/ignore-elements/ignore-elements/ignore-elements.component';
+import { LastComponent } from './rxjs/operators/last/last/last.component';
+import { SampleComponent } from './rxjs/operators/sample/sample/sample.component';
+import { SampleTimeComponent } from './rxjs/operators/sample-time/sample-time/sample-time.component';
+import { SingleComponent } from './rxjs/operators/single/single/single.component';
+import { SkipComponent } from './rxjs/operators/skip/skip/skip.component';
+import { SkipLastComponent } from './rxjs/operators/skip-last/skip-last/skip-last.component';
+import { SkipUntilComponent } from './rxjs/operators/skip-until/skip-until/skip-until.component';
+import { SkipWhileComponent } from './rxjs/operators/skip-while/skip-while/skip-while.component';
+import { TakeComponent } from './rxjs/operators/take/take/take.component';
+import { TakeLastComponent } from './rxjs/operators/take-last/take-last/take-last.component';
+import { TakeUntilComponent } from './rxjs/operators/take-until/take-until/take-until.component';
+import { TakeWhileComponent } from './rxjs/operators/take-while/take-while/take-while.component';
+import { ThrottleComponent } from './rxjs/operators/throttle/throttle/throttle.component';
+import { ThrottleTimeComponent } from './rxjs/operators/throttle-time/throttle-time/throttle-time.component';
 
 
 const appRoutes: Routes = [
@@ -154,6 +168,20 @@ const appRoutes: Routes = [
     {path: 'filter', component: FilterComponent},
     {path: 'first', component: FirstComponent},
     {path: 'ignore-elements', component: IgnoreElementsComponent},
+    {path: 'last', component: LastComponent},
+    {path: 'sample', component: SampleComponent},
+    {path: 'sample-time', component: SampleTimeComponent},
+    {path: 'single', component: SingleComponent},
+    {path: 'skip', component: SkipComponent},
+    {path: 'skip-last', component: SkipLastComponent},
+    {path: 'skip-until', component: SkipUntilComponent},
+    {path: 'skip-while', component: SkipWhileComponent},
+    {path: 'take', component: TakeComponent},
+    {path: 'take-last', component: TakeLastComponent},
+    {path: 'take-until', component: TakeUntilComponent},
+    {path: 'take-while', component: TakeWhileComponent},
+    {path: 'throttle', component: ThrottleComponent},
+    {path: 'throttle-time', component: ThrottleTimeComponent},
     //--------------------Operators--------------------//
     //-------------------------------------------------//
     {path: 'not-found', component: ErrorMessageComponent, data: {miMensaje: 'Página no encontrada (data-route)'}},

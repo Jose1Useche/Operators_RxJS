@@ -87,6 +87,13 @@ import { TakeUntilComponent } from './rxjs/operators/take-until/take-until/take-
 import { TakeWhileComponent } from './rxjs/operators/take-while/take-while/take-while.component';
 import { ThrottleComponent } from './rxjs/operators/throttle/throttle/throttle.component';
 import { ThrottleTimeComponent } from './rxjs/operators/throttle-time/throttle-time/throttle-time.component';
+import { ConcatAllComponent } from './rxjs/operators/concat-all/concat-all/concat-all.component';
+import { MergeAllComponent } from './rxjs/operators/merge-all/merge-all/merge-all.component';
+import { StartWithComponent } from './rxjs/operators/start-with/start-with/start-with.component';
+import { WithLatestFromComponent } from './rxjs/operators/with-latest-from/with-latest-from/with-latest-from.component';
+import { ShareComponent } from './rxjs/operators/share/share/share.component';
+import { CatchErrorComponent } from './rxjs/operators/catch-error/catch-error/catch-error.component';
+import { RetryComponent } from './rxjs/operators/retry/retry/retry.component';
 
 @NgModule({
   declarations: [
@@ -173,6 +180,13 @@ import { ThrottleTimeComponent } from './rxjs/operators/throttle-time/throttle-t
     TakeWhileComponent,
     ThrottleComponent,
     ThrottleTimeComponent,
+    ConcatAllComponent,
+    MergeAllComponent,
+    StartWithComponent,
+    WithLatestFromComponent,
+    ShareComponent,
+    CatchErrorComponent,
+    RetryComponent,
   ],
   imports: [
     BrowserModule,

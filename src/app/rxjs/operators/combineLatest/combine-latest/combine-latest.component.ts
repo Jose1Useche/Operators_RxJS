@@ -13,21 +13,17 @@ export class CombineLatestComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
+    //----------------------------------//
+    //--Combinar dos Observables timer--//
     
     const firstTimer = timer(0, 1000); 
     const secondTimer = timer(500, 1000); 
-    // const thirdTimer = timer(2000, 1000); 
-    // const forthTimer = timer(3000, 1000); 
     
     this.mySubscription = combineLatest([firstTimer, secondTimer, /*thirdTimer, forthTimer,*/ ]).subscribe(v => console.log(v));
-    
-    setTimeout(() => {
-      this.mySubscription.unsubscribe();
-      // firstTimer.subscribe(console.log);
-      // secondTimer.subscribe(console.log);
-      // thirdTimer.subscribe(console.log);
-      // firstTimer.subscribe(console.log);
-    }, 10000);
+  
+    //--Combinar dos Observables timer--//
+    //----------------------------------//
   }
 
 }

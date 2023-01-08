@@ -94,6 +94,25 @@ import { WithLatestFromComponent } from './rxjs/operators/with-latest-from/with-
 import { ShareComponent } from './rxjs/operators/share/share/share.component';
 import { CatchErrorComponent } from './rxjs/operators/catch-error/catch-error/catch-error.component';
 import { RetryComponent } from './rxjs/operators/retry/retry/retry.component';
+import { TapComponent } from './rxjs/operators/tap/tap/tap.component';
+import { DelayComponent } from './rxjs/operators/delay/delay/delay.component';
+import { DelayWhenComponent } from './rxjs/operators/delay-when/delay-when/delay-when.component';
+import { DematerializeComponent } from './rxjs/operators/dematerialize/dematerialize/dematerialize.component';
+import { MaterializeComponent } from './rxjs/operators/materialize/materialize/materialize.component';
+import { SubscribeOnComponent } from './rxjs/operators/subscribe-on/subscribe-on/subscribe-on.component';
+import { TimeIntervalComponent } from './rxjs/operators/time-interval/time-interval/time-interval.component';
+import { TimestampComponent } from './rxjs/operators/timestamp/timestamp/timestamp.component';
+import { TimeoutComponent } from './rxjs/operators/timeout/timeout/timeout.component';
+import { ToArrayComponent } from './rxjs/operators/to-array/to-array/to-array.component';
+import { DefaultIfEmptyComponent } from './rxjs/operators/default-if-empty/default-if-empty/default-if-empty.component';
+import { EveryComponent } from './rxjs/operators/every/every/every.component';
+import { FindComponent } from './rxjs/operators/find/find/find.component';
+import { FindIndexComponent } from './rxjs/operators/find-index/find-index/find-index.component';
+import { IsEmptyComponent } from './rxjs/operators/is-empty/is-empty/is-empty.component';
+import { CountComponent } from './rxjs/operators/count/count/count.component';
+import { MaxComponent } from './rxjs/operators/max/max/max.component';
+import { MinComponent } from './rxjs/operators/min/min/min.component';
+import { ReduceComponent } from './rxjs/operators/reduce/reduce/reduce.component';
 
 @NgModule({
   declarations: [
@@ -187,6 +206,25 @@ import { RetryComponent } from './rxjs/operators/retry/retry/retry.component';
     ShareComponent,
     CatchErrorComponent,
     RetryComponent,
+    TapComponent,
+    DelayComponent,
+    DelayWhenComponent,
+    DematerializeComponent,
+    MaterializeComponent,
+    SubscribeOnComponent,
+    TimeIntervalComponent,
+    TimestampComponent,
+    TimeoutComponent,
+    ToArrayComponent,
+    DefaultIfEmptyComponent,
+    EveryComponent,
+    FindComponent,
+    FindIndexComponent,
+    IsEmptyComponent,
+    CountComponent,
+    MaxComponent,
+    MinComponent,
+    ReduceComponent,
   ],
   imports: [
     BrowserModule,

@@ -113,6 +113,8 @@ import { CountComponent } from './rxjs/operators/count/count/count.component';
 import { MaxComponent } from './rxjs/operators/max/max/max.component';
 import { MinComponent } from './rxjs/operators/min/min/min.component';
 import { ReduceComponent } from './rxjs/operators/reduce/reduce/reduce.component';
+import { SubjectsComponent } from './subjects/subjects.component';
+import { FormularioComponent } from './forms/template-driven-forms/formulario/formulario.component';
 
 @NgModule({
   declarations: [
@@ -225,6 +227,8 @@ import { ReduceComponent } from './rxjs/operators/reduce/reduce/reduce.component
     MaxComponent,
     MinComponent,
     ReduceComponent,
+    SubjectsComponent,
+    FormularioComponent,
   ],
   imports: [
     BrowserModule,

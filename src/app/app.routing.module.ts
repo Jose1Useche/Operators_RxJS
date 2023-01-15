@@ -114,6 +114,7 @@ import { CountComponent } from './rxjs/operators/count/count/count.component';
 import { MaxComponent } from './rxjs/operators/max/max/max.component';
 import { MinComponent } from './rxjs/operators/min/min/min.component';
 import { ReduceComponent } from './rxjs/operators/reduce/reduce/reduce.component';
+import { SubjectsComponent } from './subjects/subjects.component';
 
 
 const appRoutes: Routes = [
@@ -139,6 +140,7 @@ const appRoutes: Routes = [
     ]},
     {path: 'observables', component: PruebaObservablesComponent},
     {path: 'rxjs-test', component: RxjsComponent},
+    {path: 'subjects', component: SubjectsComponent},
     //-------------------------------------------------//
     //--------------------Operators--------------------//
     {path: 'ajax', component: AjaxComponent},

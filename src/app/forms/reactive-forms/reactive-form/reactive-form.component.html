@@ -1,0 +1,60 @@
+<p>reactive-form works!</p>
+<br>
+<hr>
+<form [formGroup]="miFormulario" (ngSubmit)="onSubmit()">
+    <div formGroupName="userData">
+        <div>
+            <label for="username">Username &nbsp;</label>
+            <input 
+                type="text"
+                id="username"
+                formControlName="username">
+            <br>
+            <span *ngIf="!miFormulario.get('userData.username').valid && 
+                         miFormulario.get('userData.username').touched && 
+                         miFormulario.get('userData.username').errors['nameIsForbidden']">Nombre no permitido!
+            </span>
+            <span *ngIf="!miFormulario.get('userData.username').valid && 
+                         miFormulario.get('userData.username').touched && 
+                         miFormulario.get('userData.username').errors['required']">Ingrese nombre por favor.
+            </span>
+        </div>
+        <br>
+        <div>
+            <label for="email">Email &nbsp;</label>
+            <input 
+                type="email" 
+                id="email"
+                formControlName="email">
+            <p *ngIf="!miFormulario.get('userData.email').valid && miFormulario.get('userData.email').touched">
+                <span *ngIf="miFormulario.get('userData.email').errors?.required || 
+                             miFormulario.get('userData.email').errors?.email">Ingrese un correo valido porfavor!</span>
+                <span *ngIf="miFormulario.get('userData.email').errors?.emailIsForbidden">Correo no permitido!</span>
+            </p>
+        </div>
+    </div>
+    <br>
+    <div *ngFor="let gender of genders">
+        <label>
+            <input 
+                type="radio"
+                [value]="gender"
+                formControlName="gender"> {{ gender }}
+        </label>
+    </div>
+    <br>
+    <div formArrayName="hobbies">
+        <h4>Tus Hobbies</h4>
+        <button type="button" (click)="onAddHobby()">Agregar Hobby</button>
+        <br>
+        <br>
+        <!-- <div *ngFor="let hobbyControl of getControls(); let i = index"> -->
+        <div *ngFor="let hobby of controls; let i = index">
+            <input type="text" [formControlName]="i"> <button type="button" (click)="eliminarRegistro(i)">X</button>
+        </div>
+    </div>
+    <button type="button" (click)="removeAll()">Remove All</button>
+    <br>
+    <hr>
+    <button type="submit" [disabled]="!miFormulario.valid">Submit</button>
+</form>

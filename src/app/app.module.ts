@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app.routing.module';
 import { AppComponent } from './app.component';
@@ -115,6 +116,8 @@ import { MinComponent } from './rxjs/operators/min/min/min.component';
 import { ReduceComponent } from './rxjs/operators/reduce/reduce/reduce.component';
 import { SubjectsComponent } from './subjects/subjects.component';
 import { FormularioComponent } from './forms/template-driven-forms/formulario/formulario.component';
+import { EjercicioSixComponent } from './forms/ejercicios/ejercicio-six/ejercicio-six.component';
+import { ReactiveFormComponent } from './forms/reactive-forms/reactive-form/reactive-form.component';
 
 @NgModule({
   declarations: [
@@ -229,10 +232,14 @@ import { FormularioComponent } from './forms/template-driven-forms/formulario/fo
     ReduceComponent,
     SubjectsComponent,
     FormularioComponent,
+    EjercicioSixComponent,
+    ReactiveFormComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [FakeAuthService, ExitGuard],
   bootstrap: [AppComponent]

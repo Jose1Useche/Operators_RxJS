@@ -1,1 +1,88 @@
 <p>formulario works!</p>
+<br>
+<hr>
+<!-- <form (ngSubmit)="onSubmit(formulario)" #formulario> -->
+<!-- <form (ngSubmit)="onSubmit(f)" #f="ngForm"> -->
+<form (ngSubmit)="onSubmit()" #f="ngForm">
+    <div id="userData"
+         ngModelGroup="personalData"
+         #cualquierGuebonaita="ngModelGroup">
+        <div>
+            <label for="username">Username &nbsp;</label>
+            <input 
+                type="text" 
+                id="username"
+                [(ngModel)]="nombre"
+                name="username" 
+                required
+                >
+        </div>
+        <p *ngIf="nombre.length > 0">Tu nombre: {{ nombre }}</p>
+        <br>
+        <button type="button" (click)="sugerirNombre()">Sugerir Nombre</button>
+        <br>
+        <br>
+        <div>
+            <label for="email">Email &nbsp;</label>
+            <input 
+                type="email" 
+                id="email"
+                ngModel
+                name="email"
+                required
+                email
+                #myEmail="ngModel" 
+                >
+            <br>
+            <span *ngIf="!myEmail.valid && myEmail.touched">Please enter a valid email!</span>
+        </div>
+    </div>
+    <p *ngIf="!cualquierGuebonaita.valid && cualquierGuebonaita.touched">Conjunto de data personal No Valido!</p>
+    <br>
+    <div id="anotherData"
+         ngModelGroup="otraData">
+         <div>
+             <label for="secret">Secret Questions &nbsp;</label>
+             <select 
+                 id="secret"
+                 [ngModel]="defaultQuestion"
+                 name="secret" 
+                 >
+                 <option value="teacher">Your first teacher?</option>
+                 <option value="pet">Your first Pet?</option>
+             </select>
+         </div>
+         <br>
+         <div>
+            <label for="age">Age &nbsp;</label>
+            <input 
+                type="number" 
+                id="age"
+                ngModel
+                name="edad" 
+                required
+                >
+        </div>
+        <br>
+        <div *ngFor="let button of radioButtons">
+            <label>
+                <input 
+                    type="radio"
+                    [value]="button"
+                    ngModel
+                    name="gender"
+                    required> {{ button }}
+            </label>
+        </div>
+    </div>
+    <br>
+    <button type="submit" [disabled]="!f.valid">Submit</button>
+</form>
+<br>
+<hr>
+<h3>Tu data</h3>
+<p>Nombre: {{usuario.nombreDeUsuario}}</p>
+<p>Correo: {{usuario.correo}}</p>
+<p>Pregunta Secreta: {{usuario.preguntaSecreta}}</p>
+<p>Edad: {{usuario.edad}}</p>
+<p>Genero: {{usuario.genero}}</p>

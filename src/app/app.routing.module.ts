@@ -118,6 +118,7 @@ import { SubjectsComponent } from './subjects/subjects.component';
 import { FormularioComponent } from './forms/template-driven-forms/formulario/formulario.component';
 import { EjercicioSixComponent } from './forms/ejercicios/ejercicio-six/ejercicio-six.component';
 import { ReactiveFormComponent } from './forms/reactive-forms/reactive-form/reactive-form.component';
+import { PipeTestComponent } from './pipes/pipe-test/pipe-test.component';
 
 
 const appRoutes: Routes = [
@@ -147,6 +148,7 @@ const appRoutes: Routes = [
     {path: 'template-driven', component: FormularioComponent},
     {path: 'ejercicio-six', component: EjercicioSixComponent},
     {path: 'reactive-form', component: ReactiveFormComponent},
+    {path: 'pipe-test', component: PipeTestComponent},
     //-------------------------------------------------//
     //--------------------Operators--------------------//
     {path: 'ajax', component: AjaxComponent},

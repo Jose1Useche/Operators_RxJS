@@ -1,0 +1,29 @@
+<p>pipe-test works!</p>
+<br>
+<hr>
+<p>Mi fecha es: {{ myDate }}</p>
+<p>Mi fecha con pipe es: {{ myDate | date }}</p>
+<p>Mi fecha con pipe es: {{ myDate | date : "short" }}</p>
+<p>Mi fecha con pipe es: {{ myDate | date : "dd MMMM yy" }}</p>
+<p>Mi fecha con pipe es: {{ myDate | date : "long" | lowercase }}</p>
+<br>
+<hr>
+
+<button type="button" (click)="generateOrder()">Añadir pedidos</button>
+
+<p>Todos los pedidos</p>
+<ul style="list-style: none;">
+    <li *ngFor="let order of orders">
+        <span>{{ order.id }}.</span> {{ order.status }}
+    </li>
+</ul>
+
+<br>
+<hr>
+
+<p>Pedidos en preparación</p>
+<ul style="list-style: none;">
+    <li *ngFor="let order of orders | filterOrders : os.inPreparation">
+        <span>{{ order.id }}.</span> {{ order.status }}
+    </li>
+</ul>

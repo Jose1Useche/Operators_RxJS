@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app.routing.module';
 import { AppComponent } from './app.component';
@@ -120,6 +121,7 @@ import { EjercicioSixComponent } from './forms/ejercicios/ejercicio-six/ejercici
 import { ReactiveFormComponent } from './forms/reactive-forms/reactive-form/reactive-form.component';
 import { PipeTestComponent } from './pipes/pipe-test/pipe-test.component';
 import { FilterOrdersPipe } from './pipes/my-pipes/filter-orders.pipe';
+import { MyPostsComponent } from './http-request/primera-prueba/my-posts/my-posts.component';
 
 @NgModule({
   declarations: [
@@ -238,12 +240,14 @@ import { FilterOrdersPipe } from './pipes/my-pipes/filter-orders.pipe';
     ReactiveFormComponent,
     PipeTestComponent,
     FilterOrdersPipe,
+    MyPostsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [FakeAuthService, ExitGuard],
   bootstrap: [AppComponent]

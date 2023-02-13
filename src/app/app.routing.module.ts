@@ -119,6 +119,7 @@ import { FormularioComponent } from './forms/template-driven-forms/formulario/fo
 import { EjercicioSixComponent } from './forms/ejercicios/ejercicio-six/ejercicio-six.component';
 import { ReactiveFormComponent } from './forms/reactive-forms/reactive-form/reactive-form.component';
 import { PipeTestComponent } from './pipes/pipe-test/pipe-test.component';
+import { MyPostsComponent } from './http-request/primera-prueba/my-posts/my-posts.component';
 
 
 const appRoutes: Routes = [
@@ -149,6 +150,7 @@ const appRoutes: Routes = [
     {path: 'ejercicio-six', component: EjercicioSixComponent},
     {path: 'reactive-form', component: ReactiveFormComponent},
     {path: 'pipe-test', component: PipeTestComponent},
+    {path: 'my-posts', component: MyPostsComponent},
     //-------------------------------------------------//
     //--------------------Operators--------------------//
     {path: 'ajax', component: AjaxComponent},

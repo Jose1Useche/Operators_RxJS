@@ -19,6 +19,8 @@ import { AuthGuardService } from './auth-guard/auth-guard.service';
 import { ExitGuard } from './auth-guard/exit.guard';
 import { CursosResolverGuard } from './guards/cursos-resolver.guard';
 import { CursoResolverGuard } from './guards/curso-resolver.guard';
+import { AuthGuard } from './guards/auth.guard';
+
 import { PruebaRutaComponent } from './prueba-ruta/prueba-ruta.component';
 import { PruebaRutaDosComponent } from './prueba-ruta-dos/prueba-ruta-dos.component';
 import { PruebaRutaTresComponent } from './prueba-ruta-tres/prueba-ruta-tres.component';
@@ -120,6 +122,9 @@ import { EjercicioSixComponent } from './forms/ejercicios/ejercicio-six/ejercici
 import { ReactiveFormComponent } from './forms/reactive-forms/reactive-form/reactive-form.component';
 import { PipeTestComponent } from './pipes/pipe-test/pipe-test.component';
 import { MyPostsComponent } from './http-request/primera-prueba/my-posts/my-posts.component';
+import { AuthComponent } from './auth/auth/auth.component';
+import { SignInComponent } from './signin-signup/sign-in/sign-in.component';
+import { SignUpComponent } from './signin-signup/sign-up/sign-up.component';
 
 
 const appRoutes: Routes = [
@@ -150,7 +155,10 @@ const appRoutes: Routes = [
     {path: 'ejercicio-six', component: EjercicioSixComponent},
     {path: 'reactive-form', component: ReactiveFormComponent},
     {path: 'pipe-test', component: PipeTestComponent},
-    {path: 'my-posts', component: MyPostsComponent},
+    {path: 'my-posts', component: MyPostsComponent, canActivate: [AuthGuard]},
+    {path: 'auth', component: AuthComponent},
+    {path: 'sign-in', component: SignInComponent, canActivate: [AuthGuard]},
+    {path: 'sign-up', component: SignUpComponent},
     //-------------------------------------------------//
     //--------------------Operators--------------------//
     {path: 'ajax', component: AjaxComponent},

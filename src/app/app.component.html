@@ -1,4 +1,6 @@
 <h3>Navegacion</h3>
+<button type="button" style="float: right;" *ngIf="isAuthenticated" (click)="signOut()">Logout</button>
+<p>Estado de isAuthenticated: {{ isAuthenticated }}</p>
 <ul>
     <li>
         <a routerLink="/"
@@ -58,7 +60,22 @@
         <a routerLink="/pipe-test"
            routerLinkActive="MisEstilos">Pipes</a>
     </li>
-
+    <li *ngIf="!isAuthenticated">
+        <a routerLink="/auth"
+           routerLinkActive="MisEstilos">Autenticacion</a>
+    </li>
+    <li *ngIf="isAuthenticated">
+        <a routerLink="/sign-in"
+           routerLinkActive="MisEstilos">SignIn</a>
+    </li>
+    <li>
+        <a routerLink="/sign-up"
+           routerLinkActive="MisEstilos">Sign Up</a>
+    </li>
+    <li>
+        <a routerLink="/my-posts"
+           routerLinkActive="MisEstilos">My Posts</a>
+    </li>
 </ul>
 
 <p>Mensaje desde Subject Component: {{ conteoClicks }}</p>

@@ -17,7 +17,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { NotAuthorizedComponent } from './not-authorized/not-authorized.component';
 //*********************************************************************************
 import { FakeAuthService } from './auth-guard/fake-auth.service';
-import { AuthInterceptorService } from './services/auth-interceptor.service';
+import { AuthInterceptorTestService } from './services/auth-interceptor-test.service';
+import { AuthInterceptorService } from './services/interceptors/auth-interceptor-service/auth-interceptor.service';
 import { TestInterceptorService } from './services/test-interceptor.service';
 //*********************************************************************************
 import { ExitGuard } from './auth-guard/exit.guard';
@@ -126,6 +127,10 @@ import { ReactiveFormComponent } from './forms/reactive-forms/reactive-form/reac
 import { PipeTestComponent } from './pipes/pipe-test/pipe-test.component';
 import { FilterOrdersPipe } from './pipes/my-pipes/filter-orders.pipe';
 import { MyPostsComponent } from './http-request/primera-prueba/my-posts/my-posts.component';
+import { AuthComponent } from './auth/auth/auth.component';
+import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinner.component';
+import { SignInComponent } from './signin-signup/sign-in/sign-in.component';
+import { SignUpComponent } from './signin-signup/sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -245,6 +250,10 @@ import { MyPostsComponent } from './http-request/primera-prueba/my-posts/my-post
     PipeTestComponent,
     FilterOrdersPipe,
     MyPostsComponent,
+    AuthComponent,
+    LoadingSpinnerComponent,
+    SignInComponent,
+    SignUpComponent,
   ],
   imports: [
     BrowserModule,
@@ -261,11 +270,11 @@ import { MyPostsComponent } from './http-request/primera-prueba/my-posts/my-post
       useClass: AuthInterceptorService,
       multi: true
     },
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: TestInterceptorService,
-      multi: true
-    }
+    // {
+    //   provide: HTTP_INTERCEPTORS,
+    //   useClass: TestInterceptorService,
+    //   multi: true
+    // }
   ],
   bootstrap: [AppComponent]
 })

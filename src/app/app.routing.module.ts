@@ -25,7 +25,6 @@ import { PruebaRutaComponent } from './prueba-ruta/prueba-ruta.component';
 import { PruebaRutaDosComponent } from './prueba-ruta-dos/prueba-ruta-dos.component';
 import { PruebaRutaTresComponent } from './prueba-ruta-tres/prueba-ruta-tres.component';
 import { PruebaObservablesComponent } from './prueba-observables/prueba-observables.component';
-import { RxjsComponent } from './rxjs/rxjs.component';
 import { SubjectsComponent } from './subjects/subjects.component';
 import { FormularioComponent } from './forms/template-driven-forms/formulario/formulario.component';
 import { EjercicioSixComponent } from './forms/ejercicios/ejercicio-six/ejercicio-six.component';

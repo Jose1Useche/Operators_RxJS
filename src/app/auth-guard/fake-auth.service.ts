@@ -1,5 +1,5 @@
 export class FakeAuthService {
-  loggedIn: boolean = false;
+  loggedIn: boolean = true;
 
   isAuthenticated() {
     const promise = new Promise<boolean>(

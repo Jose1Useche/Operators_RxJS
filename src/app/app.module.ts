@@ -9,17 +9,12 @@ import { HomeComponent } from './home/home.component';
 import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
 import { RegistrateComponent } from './registrate/registrate.component';
 import { ContactanosComponent } from './contactanos/contactanos.component';
-import { EmpleadosComponent } from './empleados/empleados.component';
-import { EmpleadoComponent } from './empleados/empleado/empleado.component';
-import { HermanoEmpleadoComponent } from './empleados/hermano-empleado/hermano-empleado.component';
-import { EditComponent } from './empleados/empleado/edit/edit.component';
+import { EmpleadosModule } from './empleados/empleados.module';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { NotAuthorizedComponent } from './not-authorized/not-authorized.component';
 //*********************************************************************************
 import { FakeAuthService } from './auth-guard/fake-auth.service';
-import { AuthInterceptorTestService } from './services/auth-interceptor-test.service';
 import { AuthInterceptorService } from './services/interceptors/auth-interceptor-service/auth-interceptor.service';
-import { TestInterceptorService } from './services/test-interceptor.service';
 //*********************************************************************************
 import { ExitGuard } from './auth-guard/exit.guard';
 import { ErrorMessageComponent } from './error-message/error-message.component';
@@ -50,10 +45,6 @@ import { RxJSModule } from './rxjs/rxjs.module';
     QuienesSomosComponent,
     RegistrateComponent,
     ContactanosComponent,
-    EmpleadosComponent,
-    EmpleadoComponent,
-    HermanoEmpleadoComponent,
-    EditComponent,
     NotFoundComponent,
     NotAuthorizedComponent,
     ErrorMessageComponent,
@@ -63,7 +54,6 @@ import { RxJSModule } from './rxjs/rxjs.module';
     PruebaRutaDosComponent,
     PruebaRutaTresComponent,
     PruebaObservablesComponent,
-  
     SubjectsComponent,
     FormularioComponent,
     EjercicioSixComponent,
@@ -79,6 +69,7 @@ import { RxJSModule } from './rxjs/rxjs.module';
   imports: [
     BrowserModule,
     RxJSModule,
+    EmpleadosModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,

@@ -9,7 +9,6 @@ import { HomeComponent } from './home/home.component';
 import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
 import { RegistrateComponent } from './registrate/registrate.component';
 import { ContactanosComponent } from './contactanos/contactanos.component';
-import { EmpleadosModule } from './empleados/empleados.module';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { NotAuthorizedComponent } from './not-authorized/not-authorized.component';
 //*********************************************************************************
@@ -69,7 +68,6 @@ import { RxJSModule } from './rxjs/rxjs.module';
   imports: [
     BrowserModule,
     RxJSModule,
-    EmpleadosModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
@@ -83,11 +81,6 @@ import { RxJSModule } from './rxjs/rxjs.module';
       useClass: AuthInterceptorService,
       multi: true
     },
-    // {
-    //   provide: HTTP_INTERCEPTORS,
-    //   useClass: TestInterceptorService,
-    //   multi: true
-    // }
   ],
   bootstrap: [AppComponent]
 })

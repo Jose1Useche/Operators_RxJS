@@ -37,6 +37,7 @@ const appRoutes: Routes = [
     {path: 'cursos', resolve: {cursos: CursosResolverGuard},component: CursosComponent, children: [
       {path: ':id', resolve: {curso: CursoResolverGuard}, component: CursoComponent}
     ]},
+    {path: 'empleados', loadChildren: () => import('./empleados/empleados.module').then(m => m.EmpleadosModule)},
     {path: 'not-authorized', component: NotAuthorizedComponent},
     {path: 'test', component: PruebaRutaComponent, children: [
       {path: 'test2', component: PruebaRutaDosComponent},

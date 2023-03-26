@@ -8,7 +8,7 @@ import { EditComponent } from './empleado/edit/edit.component';
 import { AuthGuardService } from '../auth-guard/auth-guard.service';
 
 const appRoutes: Routes = [
-    {path: 'empleados', canActivateChild: [AuthGuardService] ,component: EmpleadosComponent, children: [
+    {path: '', canActivateChild: [AuthGuardService] ,component: EmpleadosComponent, children: [
       {path: ':myId', component: EmpleadoComponent, children: [
         {path: 'edit', component: EditComponent}
       ]},

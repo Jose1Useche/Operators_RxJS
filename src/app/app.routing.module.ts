@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
 import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
@@ -27,7 +27,6 @@ import { AuthComponent } from './auth/auth/auth.component';
 import { SignInComponent } from './signin-signup/sign-in/sign-in.component';
 import { SignUpComponent } from './signin-signup/sign-up/sign-up.component';
 
-
 const appRoutes: Routes = [
     {path: '', redirectTo: 'home', pathMatch: 'full'},
     {path: 'home', component: HomeComponent},
@@ -38,6 +37,7 @@ const appRoutes: Routes = [
       {path: ':id', resolve: {curso: CursoResolverGuard}, component: CursoComponent}
     ]},
     {path: 'empleados', loadChildren: () => import('./empleados/empleados.module').then(m => m.EmpleadosModule)},
+    {path: 'base', loadChildren: () => import('./lazy-loading/base.module').then(m => m.BaseModule)},
     {path: 'not-authorized', component: NotAuthorizedComponent},
     {path: 'test', component: PruebaRutaComponent, children: [
       {path: 'test2', component: PruebaRutaDosComponent},
@@ -59,7 +59,7 @@ const appRoutes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes, { preloadingStrategy: PreloadAllModules })
   ],
   exports: [RouterModule]
 })

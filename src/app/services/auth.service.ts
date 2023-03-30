@@ -3,6 +3,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { catchError, tap } from 'rxjs/operators';
 import { BehaviorSubject, Observable, Subject, throwError } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 import { AuthBody } from '../models/auth-body';
 import { User } from '../models/user.model';
@@ -25,7 +26,7 @@ export class AuthService {
   // userObs: Observable<User> = this.user.asObservable();
   private user: BehaviorSubject<User> = new BehaviorSubject<User>(null);
   userObs: Observable<User> = this.user.asObservable();
-  private apiKey: string = 'AIzaSyDGef5XSC67rodEWWjGRETWt8Qxcxh_e_Y';
+  // private apiKey: string = 'AIzaSyDGef5XSC67rodEWWjGRETWt8Qxcxh_e_Y';
   errorMessage: string = 'Oops... an error has occurred!';
   private tokenExpirationTimer: number = null;
 
@@ -34,7 +35,8 @@ export class AuthService {
 
   signUp(authBody: AuthBody) {
     return this.http.post<AuthResponseData>(
-      `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${this.apiKey}`,
+      // `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${this.apiKey}`,
+      'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=' + environment.firebaseAPIKey,
       authBody
     ).pipe(
       catchError(this.errorValidation),
@@ -51,7 +53,8 @@ export class AuthService {
 
   signIn(authBody: AuthBody) {
     return this.http.post<AuthResponseData>(
-      `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${this.apiKey}`,
+      // `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${this.apiKey}`,
+      'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=' + environment.firebaseAPIKey,
       authBody
       ).pipe(
         catchError(this.errorValidation),
